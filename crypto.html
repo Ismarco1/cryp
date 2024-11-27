@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة العملات الرقمية</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="crypto.html" class="active">العملات الرقمية</a></li>
+            </ul>
+            <button id="dark-mode-toggle">
+                <i id="mode-icon" class="fas fa-sun"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="currency-converter">
+        <h1>حاسبة العملات الرقمية</h1>
+
+        <label for="crypto-currency">اختر العملة الرقمية:</label>
+    <select id="crypto-currency">
+        <option value="" disabled selected>اختر العملة</option>
+        <!-- العملات ستضاف هنا من API -->
+    </select>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+        <label for="amount">المبلغ:</label>
+        <input type="number" id="amount" value="1">
+
+        <button id="convert-crypto-btn">تحويل</button>
+
+        <h3>النتيجة: <span id="crypto-result">-</span></h3>
+    </div>
+    <div class="metals-link">
+        <p> Marco 2024</p>
+    </div>
+
+    <script src="crypto-script.js"></script>
+</body>
+</html>

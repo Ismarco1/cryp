@@ -1,0 +1,210 @@
+/* إعدادات الخطوط العامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    direction: rtl; /* التوجه من اليمين لليسار */
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+/* تصميم الهيدر والقائمة */
+header {
+    background-color: #2d3b48;
+    padding: 15px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #e74c3c;
+}
+
+/* تصميم النموذج الخاص بالعملات الرقمية */
+.currency-converter {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.currency-converter h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 30px;
+}
+
+.currency-converter label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.currency-converter select,
+.currency-converter input,
+.currency-converter button {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.currency-converter select,
+.currency-converter input {
+    background-color: #f4f6f9;
+}
+
+.currency-converter button {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.currency-converter button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* وضع الوضع الغامق */
+body.dark-mode {
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
+body.dark-mode .currency-converter {
+    background-color: #333;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode header {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode header nav ul li a {
+    color: #fff;
+}
+
+body.dark-mode header nav ul li a:hover {
+    background-color: #f39c12;
+}
+
+body.dark-mode .currency-converter select,
+body.dark-mode .currency-converter input {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .currency-converter button {
+    background-color: #1abc9c;
+}
+
+body.dark-mode .currency-converter button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+body.dark-mode h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* تحسين تصميم الأيقونة */
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    transition: transform 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .currency-converter {
+        width: 90%;
+    }
+}
+
+/* إضافة التصميم الخاص بمربع البحث داخل القائمة المنسدلة */
+#search-input {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    background-color: #f4f6f9;
+    box-sizing: border-box;
+}
+
+/* تحسين التصميم المتجاوب لمربع البحث */
+@media (max-width: 768px) {
+    #search-input {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+#currency-chart {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.metals-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.metals-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.metals-link a:hover {
+    text-decoration: underline;
+}
